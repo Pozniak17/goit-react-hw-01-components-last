@@ -5,7 +5,6 @@ function UserList({ items }) {
   return (
     <div>
       <Profile
-        key={items.username}
         username={items.username}
         tag={items.tag}
         location={items.location}
