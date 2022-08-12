@@ -1,27 +1,20 @@
-import Profile from './Profile';
 import user from '../user.json';
+import UserList from './UserList';
 
+// наша App приймає UserList з пропсом якого items={user}
 export const App = () => {
   return (
     <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
+    // style={{
+    //   height: '100vh',
+    //   display: 'flex',
+    //   justifyContent: 'center',
+    //   alignItems: 'center',
+    //   fontSize: 40,
+    //   color: '#010101',
+    // }}
     >
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
-      />
+      <UserList items={user} />
     </div>
   );
 };

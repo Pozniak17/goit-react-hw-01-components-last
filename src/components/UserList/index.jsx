@@ -1,0 +1,21 @@
+import Profile from '../Profile';
+
+// тут в нас UserList, яка приймає в App має пропс items, який є user.json, а з нього витягує дані.
+function UserList({ items }) {
+  return (
+    <div>
+      <Profile
+        key={items.username}
+        username={items.username}
+        tag={items.tag}
+        location={items.location}
+        avatar={items.avatar}
+        followers={items.stats.followers}
+        views={items.stats.views}
+        likes={items.stats.likes}
+      />
+    </div>
+  );
+}
+
+export default UserList;
