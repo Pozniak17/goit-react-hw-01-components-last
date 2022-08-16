@@ -7,7 +7,7 @@ const StatisticsRender = ({ stats }) => {
     <Statistics
       id={statistic.id}
       label={statistic.label}
-      percentage={statistic.percentage}
+      percentage={statistic.percentage + '%'}
     />
   ));
 };
