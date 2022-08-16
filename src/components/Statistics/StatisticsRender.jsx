@@ -2,7 +2,7 @@ import Statistics from './index';
 
 // тут ми створюємо підключення
 
-function StatisticsList({ stats }) {
+const StatisticsRender = ({ stats }) => {
   return stats.map(statistic => (
     <Statistics
       id={statistic.id}
@@ -10,6 +10,6 @@ function StatisticsList({ stats }) {
       percentage={statistic.percentage}
     />
   ));
-}
+};
 
-export default StatisticsList;
+export default StatisticsRender;

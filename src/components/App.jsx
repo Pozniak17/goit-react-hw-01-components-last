@@ -2,10 +2,14 @@ import user from '../user.json';
 import data from '../data.json';
 import UserList from './Profile/UserList';
 
-import StatisticsList from './Statistics/StatisticsList';
-
 import StatisticTitle from './StatisticTitle';
+
+import style from './Statistics/style.module.css';
+
 import { Fragment } from 'react';
+import StatisticsRender from './Statistics/StatisticsRender';
+import StatisticsList from './StitisticList';
+// import Statistics from './Statistics';
 
 // наша App приймає UserList з пропсом якого items={user}
 export const App = () => {
@@ -22,8 +26,13 @@ export const App = () => {
     >
       <UserList items={user} />
 
-      <StatisticTitle title="Upload stats" stats={data} />
-      <StatisticsList stats={data} />
+      <section className={style.statistics}>
+        <StatisticTitle text="Upload stats" stats={data} />
+
+        <StatisticsList>
+          <StatisticsRender stats={data} />
+        </StatisticsList>
+      </section>
     </Fragment>
   );
 };
