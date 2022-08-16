@@ -3,12 +3,14 @@ import data from '../data.json';
 import UserList from './Profile/UserList';
 
 import StatisticsList from './Statistics/StatisticsList';
-import Statistics from './Statistics';
+
+import StatisticTitle from './StatisticTitle';
+import { Fragment } from 'react';
 
 // наша App приймає UserList з пропсом якого items={user}
 export const App = () => {
   return (
-    <div
+    <Fragment
     // style={{
     //   height: '100vh',
     //   display: 'flex',
@@ -20,8 +22,8 @@ export const App = () => {
     >
       <UserList items={user} />
 
-      <Statistics title="Upload stats" stats={data} />
+      <StatisticTitle title="Upload stats" stats={data} />
       <StatisticsList stats={data} />
-    </div>
+    </Fragment>
   );
 };
