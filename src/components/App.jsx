@@ -1,5 +1,9 @@
 import user from '../user.json';
-import UserList from './UserList';
+import data from '../data.json';
+import UserList from './Profile/UserList';
+
+import StatisticsList from './Statistics/StatisticsList';
+import Statistics from './Statistics';
 
 // наша App приймає UserList з пропсом якого items={user}
 export const App = () => {
@@ -15,6 +19,9 @@ export const App = () => {
     // }}
     >
       <UserList items={user} />
+
+      <Statistics title="Upload stats" stats={data} />
+      <StatisticsList stats={data} />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import Profile from '../Profile';
+import Profile from './index';
 
 // тут в нас UserList, яка приймає в App має пропс items, який є user.json, а з нього витягує дані.
 function UserList({ items }) {
