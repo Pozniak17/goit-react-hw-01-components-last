@@ -3,12 +3,8 @@ import Statistics from './index';
 // тут ми створюємо підключення
 
 const StatisticsRender = ({ stats }) => {
-  return stats.map(statistic => (
-    <Statistics
-      id={statistic.id}
-      label={statistic.label}
-      percentage={statistic.percentage + '%'}
-    />
+  return stats.map(({ id, label, percentage }) => (
+    <Statistics id={id} label={label} percentage={percentage + '%'} />
   ));
 };
 
