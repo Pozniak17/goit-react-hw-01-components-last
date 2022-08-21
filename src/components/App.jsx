@@ -1,14 +1,14 @@
-import user from '../user.json';
-import data from '../data.json';
+import user from '../json/user.json';
+import data from '../json/data.json';
 import UserList from './Profile/UserList';
 
-import StatisticTitle from './StatisticTitle';
+import StatisticTitle from './Statistics/StatisticTitle';
 
 import style from './Statistics/style.module.css';
 
 import { Fragment } from 'react';
 import StatisticsRender from './Statistics/StatisticsRender';
-import StatisticsList from './StitisticList';
+import StatisticsList from './Statistics/StitisticList';
 // import Statistics from './Statistics';
 
 // наша App приймає UserList з пропсом якого items={user}
