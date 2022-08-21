@@ -4,9 +4,8 @@ import UserList from './Profile/UserList';
 
 import StatisticTitle from './Statistics/StatisticTitle';
 
-import style from './Statistics/style.module.css';
-
 import { Fragment } from 'react';
+import StatisticSection from './Statistics/StatisticSection';
 import StatisticsRender from './Statistics/StatisticsRender';
 import StatisticsList from './Statistics/StitisticList';
 // import Statistics from './Statistics';
@@ -26,13 +25,13 @@ export const App = () => {
     >
       <UserList items={user} />
 
-      <section className={style.statistics}>
+      <StatisticSection>
         <StatisticTitle text="Upload stats" stats={data} />
 
         <StatisticsList>
           <StatisticsRender stats={data} />
         </StatisticsList>
-      </section>
+      </StatisticSection>
     </Fragment>
   );
 };
