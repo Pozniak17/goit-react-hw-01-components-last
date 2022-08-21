@@ -1,5 +1,9 @@
+// JSON файли
 import user from '../json/user.json';
 import data from '../json/data.json';
+import friends from '../json/friends.json';
+//
+
 import UserList from './Profile/UserList';
 
 import StatisticTitle from './Statistics/StatisticTitle';
@@ -8,7 +12,9 @@ import { Fragment } from 'react';
 import StatisticSection from './Statistics/StatisticSection';
 import StatisticsRender from './Statistics/StatisticsRender';
 import StatisticsList from './Statistics/StitisticList';
-// import Statistics from './Statistics';
+
+import FriendList from './Friend/FriendList';
+import FriendListItemRender from './Friend/FriendListItem/FriendListItemRender';
 
 // наша App приймає UserList з пропсом якого items={user}
 export const App = () => {
@@ -32,6 +38,10 @@ export const App = () => {
           <StatisticsRender stats={data} />
         </StatisticsList>
       </StatisticSection>
+
+      <FriendList>
+        <FriendListItemRender friends={friends} />
+      </FriendList>
     </Fragment>
   );
 };
