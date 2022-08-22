@@ -3,9 +3,19 @@ import style from './style.module.css';
 const FriendListItem = props => {
   return (
     <li className={style.item} key={props.id}>
-      <span className="status">{props.isOnline}</span>
-      <img className="avatar" src={props.avatar} alt="User avatar" width="48" />
-      <p className="name">{props.name}</p>
+      {props.isOnline ? (
+        <span className={style.online}>{props.isOnline}</span>
+      ) : (
+        <span className={style.offline}>{props.isOnline}</span>
+      )}
+
+      <img
+        className={style.avatar}
+        src={props.avatar}
+        alt="User avatar"
+        width="48"
+      />
+      <p className={style.name}>{props.name}</p>
     </li>
   );
 };
