@@ -1,8 +1,9 @@
 import style from './style.module.css';
+import PropTypes from 'prop-types';
 
 const FriendListItem = props => {
   return (
-    <li className={style.item} key={props.id}>
+    <li className={style.item} id={props.id}>
       {props.isOnline ? (
         <span className={style.online}>{props.isOnline}</span>
       ) : (
@@ -21,3 +22,14 @@ const FriendListItem = props => {
 };
 
 export default FriendListItem;
+
+FriendListItem.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    })
+  ),
+};

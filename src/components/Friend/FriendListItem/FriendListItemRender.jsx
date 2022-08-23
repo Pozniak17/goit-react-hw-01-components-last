@@ -1,12 +1,8 @@
 import FriendListItem from './index';
+
 const FriendListItemRender = ({ friends }) => {
-  return friends.map(friend => (
-    <FriendListItem
-      id={friend.id}
-      isOnline={friend.isOnline}
-      avatar={friend.avatar}
-      name={friend.name}
-    />
+  return friends.map(({ id, isOnline, avatar, name }) => (
+    <FriendListItem key={id} isOnline={isOnline} avatar={avatar} name={name} />
   ));
 };
 

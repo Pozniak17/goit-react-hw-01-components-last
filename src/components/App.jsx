@@ -5,13 +5,12 @@ import friends from '../json/friends.json';
 import transaction from '../json/transactions.json';
 //
 
+import { Fragment } from 'react';
+
 import UserList from './Profile/UserList';
 
 import StatisticTitle from './Statistics/StatisticTitle';
-
-import { Fragment } from 'react';
 import StatisticSection from './Statistics/StatisticSection';
-import StatisticsRender from './Statistics/StatisticsRender';
 import StatisticsList from './Statistics/StitisticList';
 
 import FriendList from './Friend/FriendList';
@@ -34,11 +33,8 @@ export const App = () => {
       <UserList items={user} />
 
       <StatisticSection>
-        <StatisticTitle text="Upload stats" stats={data} />
-
-        <StatisticsList>
-          <StatisticsRender stats={data} />
-        </StatisticsList>
+        <StatisticTitle text="Upload stats" />
+        <StatisticsList stats={data} />
       </StatisticSection>
 
       <FriendList>

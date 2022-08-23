@@ -1,3 +1,6 @@
+// ✅
+import PropTypes from 'prop-types';
+
 import style from './style.module.css';
 // Заголовок
 
@@ -6,3 +9,7 @@ const StatisticTitle = ({ text }) => {
 };
 
 export default StatisticTitle;
+
+StatisticTitle.propTypes = {
+  title: PropTypes.string,
+};
