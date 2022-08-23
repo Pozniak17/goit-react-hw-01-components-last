@@ -1,0 +1,31 @@
+.history {
+  background-color: white;
+  margin: 100px auto;
+  width: 400px;
+  height: 100%;
+
+  align-items: center;
+
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+thead {
+  background-color: #00bcd5;
+}
+
+th {
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px 10px 20px 40px;
+}
+
+tr:nth-child(even) {
+  background-color: #ecf1f3;
+}
+
+td:first-child {
+  text-transform: capitalize;
+}

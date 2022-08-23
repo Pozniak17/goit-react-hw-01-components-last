@@ -2,6 +2,7 @@
 import user from '../json/user.json';
 import data from '../json/data.json';
 import friends from '../json/friends.json';
+import transaction from '../json/transactions.json';
 //
 
 import UserList from './Profile/UserList';
@@ -16,6 +17,7 @@ import StatisticsList from './Statistics/StitisticList';
 import FriendList from './Friend/FriendList';
 import FriendListItemRender from './Friend/FriendListItem/FriendListItemRender';
 
+import TransactionHistory from './Transaction/TransactionHistory';
 // наша App приймає UserList з пропсом якого items={user}
 export const App = () => {
   return (
@@ -42,6 +44,8 @@ export const App = () => {
       <FriendList>
         <FriendListItemRender friends={friends} />
       </FriendList>
+
+      <TransactionHistory items={transaction} />
     </Fragment>
   );
 };
