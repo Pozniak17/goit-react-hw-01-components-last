@@ -29,6 +29,7 @@ export default TransactionHistory;
 TransactionHistory.propTypes = {
   stats: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number.isRequired,
       type: PropTypes.string.isRequired,
       amount: PropTypes.string.isRequired,
       currency: PropTypes.number.isRequired,

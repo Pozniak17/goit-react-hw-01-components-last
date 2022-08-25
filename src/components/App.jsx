@@ -3,31 +3,17 @@ import user from '../json/user.json';
 import data from '../json/data.json';
 import friends from '../json/friends.json';
 import transaction from '../json/transactions.json';
-//
 
 import { Fragment } from 'react';
 
 import Profile from './Profile';
-
 import Statistics from './Statistics';
-
 import FriendList from './Friend/FriendList';
-import FriendListItemRender from './Friend/FriendListItem/FriendListItemRender';
-
 import TransactionHistory from './Transaction/TransactionHistory';
-// наша App приймає UserList з пропсом якого items={user}
+
 export const App = () => {
   return (
-    <Fragment
-    // style={{
-    //   height: '100vh',
-    //   display: 'flex',
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
-    //   fontSize: 20,
-    //   color: '#010101',
-    // }}
-    >
+    <Fragment>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -35,13 +21,8 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-
       <Statistics title="Upload stats" stats={data} />
-
-      <FriendList>
-        <FriendListItemRender friends={friends} />
-      </FriendList>
-
+      <FriendList friends={friends} />
       <TransactionHistory items={transaction} />
     </Fragment>
   );
