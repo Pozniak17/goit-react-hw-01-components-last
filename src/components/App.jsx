@@ -9,9 +9,7 @@ import { Fragment } from 'react';
 
 import Profile from './Profile';
 
-import StatisticTitle from './Statistics/StatisticTitle';
-import StatisticSection from './Statistics/StatisticSection';
-import StatisticsList from './Statistics/StitisticList';
+import Statistics from './Statistics';
 
 import FriendList from './Friend/FriendList';
 import FriendListItemRender from './Friend/FriendListItem/FriendListItemRender';
@@ -38,10 +36,7 @@ export const App = () => {
         stats={user.stats}
       />
 
-      <StatisticSection>
-        <StatisticTitle text="Upload stats" />
-        <StatisticsList stats={data} />
-      </StatisticSection>
+      <Statistics title="Upload stats" stats={data} />
 
       <FriendList>
         <FriendListItemRender friends={friends} />
