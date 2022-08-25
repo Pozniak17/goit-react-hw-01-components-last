@@ -7,7 +7,7 @@ import transaction from '../json/transactions.json';
 
 import { Fragment } from 'react';
 
-import UserList from './Profile/UserList';
+import Profile from './Profile';
 
 import StatisticTitle from './Statistics/StatisticTitle';
 import StatisticSection from './Statistics/StatisticSection';
@@ -30,7 +30,13 @@ export const App = () => {
     //   color: '#010101',
     // }}
     >
-      <UserList items={user} />
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
 
       <StatisticSection>
         <StatisticTitle text="Upload stats" />
