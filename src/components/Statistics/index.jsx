@@ -6,7 +6,8 @@ import getRandomHexColor from '../utils/RandomColors';
 const Statistics = ({ title, stats }) => {
   return (
     <section className={style.statistics}>
-      <h2 className={style.title}>{title.toUpperCase()}</h2>
+      {title && <h2 className={style.title}>{title.toUpperCase()}</h2>}
+
       <ul className={style.list}>
         {stats.map(({ id, label, percentage }) => (
           <li
