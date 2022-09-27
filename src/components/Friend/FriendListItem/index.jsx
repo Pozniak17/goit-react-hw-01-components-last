@@ -4,10 +4,7 @@ import style from './style.module.css';
 const FriendListItem = ({ id, isOnline, avatar, name }) => {
   return (
     <li className={style.item} id={id}>
-      <span
-        className={style.online}
-        style={{ backgroundColor: isOnline ? 'green' : 'red' }}
-      >
+      <span className={isOnline ? style.online : style.offline}>
         {isOnline}
       </span>
 
