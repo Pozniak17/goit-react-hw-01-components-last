@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import style from './style.module.css';
+import profileAvatar from '../utils/images/profile.jpg';
 
 const Profile = ({
-  avatar,
   username,
   tag,
   location,
+  avatar = profileAvatar,
   stats: { followers, views, likes },
 }) => {
   return (
@@ -44,7 +45,7 @@ Profile.propTypes = {
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
-  }),
+  }).isRequired,
 };
 
 export default Profile;
